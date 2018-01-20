@@ -1,0 +1,23 @@
+
+
+<a href="/build-sessions/new">Build A New Session</a>
+
+
+<% @build_sessions.each do |bs|%>
+	<h2><%= bs.name%></h2>
+	<h4>Description:</h4><%= bs.description%>
+	<br>
+	<h4>Expected Pomodoro Periods:</h4><%= bs.expected_pomo_periods%>
+	<br>
+	<h4>Reward:</h4><%= bs.reward%>
+	<br>
+	<h4>Completed?:</h4><%= bs.completed?%>
+	<br>
+	<form action="/build-sessions/<%=bs.id%>/edit" method="GET">
+	<input type="submit" value="Start Coding On This Project Now" >
+	</form>
+	<%end%>
+
+	
+
+

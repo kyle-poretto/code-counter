@@ -1,0 +1,10 @@
+Code Sessions flow
+
+New -> Edit(if you want)(Show Page) -> Start (Start Page) -> Done (Reward Page)
+^       
+
+def change
+    delete_column(:build_sessions, :expected_pomo_periods)
+    delete_column(:build_sessions, :actual_pomo_periods)
+  end
+end

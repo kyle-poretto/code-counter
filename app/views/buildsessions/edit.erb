@@ -1,0 +1,16 @@
+<h1>Edit The Session</h1>
+
+<form action="/build-sessions/<%=@build_session.id%>/edit" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <input id="hidden" type="hidden" name="<%=@build_session.id%>">
+    <h2>Task:</h2><input type="text" name="name" value="<%=@build_session.name%>">
+    <h2>Description:</h2><input type="text"name="description" value="<%=@build_session.description%>">
+    <h2>Reward for Completion:</h2><input type="text"name="reward" value="<%=@build_session.reward%>">
+    <h2>Expected Pomodoro Rounds:</h2><input type="text"name="expected_pomo_periods" value="<%=@build_session.expected_pomo_periods%>">
+    <input type="submit" value="Edit">
+
+</form>
+
+<form action="/build-sessions/<%=@build_session.id%>/work" method="GET">
+<input type="submit" value="Start The Build" >
+</form>

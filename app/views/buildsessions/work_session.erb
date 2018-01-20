@@ -1,0 +1,15 @@
+<h1>Pursue Your Passion</h1>
+
+<h2>The Task: <%=@build_session.name%> is a way for you to get there!</h2>
+
+<h3>Think about the reward: <%=@build_session.reward%>
+
+
+<form action="/build-sessions/<%=@build_session.id%>/edit" method="GET">
+    <input type="submit" value="Edit" >
+
+</form>
+
+<form action="/build-sessions/<%=@build_session.id%>/reward" method="POST">
+    <input type="submit" value="Finish">
+</form>

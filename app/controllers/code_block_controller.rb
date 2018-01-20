@@ -1,3 +1,0 @@
-class CodeBlock < ApplicationController
-    
-end

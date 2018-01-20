@@ -10,24 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111204724) do
+ActiveRecord::Schema.define(version: 20180120223115) do
 
   create_table "build_sessions", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "description"
     t.string "reward"
-    t.integer "minutes"
     t.integer "productivity_score"
     t.string "user_ids"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_timer", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "build_session_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "expected_pomo_periods"
+    t.integer "actual_pomo_periods"
+    t.boolean "completed?"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,18 @@
+<h1>Build Session:<%=@build_session.name%></h1>
+
+<h3><%=@build_session.description%></h3>
+<h3><%=@build_session.reward%></h3>
+<h3><%=@build_session.productivity_score%></h3>
+<h3><%=@build_session.expected_pomo_periods%></h3>
+<h3><%=@build_session.actual_pomo_periods%></h3>
+<h3><%=@build_session.completed?%></h3>
+
+
+<form action="/build-sessions/<%=@build_session.id%>/edit" method="GET">
+<input type="submit" value="Edit The Build Before Starting" >
+</form>
+
+<form action="/build-sessions/<%=@build_session.id%>/work" method="GET">
+<input type="submit" value="Start The Build" >
+</form>
+
