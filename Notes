@@ -8,3 +8,12 @@ def change
     delete_column(:build_sessions, :actual_pomo_periods)
   end
 end
+
+Build layout .erb
+
+authorization for code Sessions
+
+
+Post Pair Programming - Associate a user to a build session upon instantization - on a form
+
+

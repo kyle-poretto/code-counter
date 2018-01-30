@@ -27,15 +27,18 @@ class UserController < ApplicationController
 		@user = User.find_by(:email => params[:email])
 		if @user && @user.authenticate(params[:password])
 			session[:user_id] = @user.id
-			erb :'/buildsessions/all'
+			redirect to '/build-sessions'
 		else
 			redirect to '/login'
 		end
 
-	end
-
-
-		
-
+  end
+  
+   get '/logout' do
+    if logged_in? 
+      session.clear
+      redirect to '/login'
+    end
+  end
     
 end

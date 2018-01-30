@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Code Counter</title>
+  </head>
+  <body>
+ 
+    <div class="container">
+    <% if logged_in? %>
+      <p><a href="/logout">Log Out</a></p>
+      <% else %>
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Login</a>
+      <% end %>
+ 
+      <%= yield %>
+ 
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
